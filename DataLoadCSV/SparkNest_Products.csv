@@ -1,0 +1,9 @@
+Name,ProductCode,Family,SKU__c,IsActive,Description
+SparkNest Phone X1,SN-PX1,Personal Devices,SN-PD-001,TRUE,6.5 inch smartphone with 128 GB storage
+SparkNest Smartwatch Pulse,SN-SWP,Personal Devices,SN-PD-002,TRUE,Fitness smartwatch with heart-rate tracking
+SparkNest Smart Bulb Duo,SN-SBD,Smart Home,SN-SH-001,TRUE,Wi-Fi smart bulb pack of 2 with app control
+SparkNest Home Hub Mini,SN-HHM,Smart Home,SN-SH-002,TRUE,Voice assistant hub for smart home devices
+SparkNest Wireless Earbuds,SN-WEB,Accessories,SN-AC-001,TRUE,Bluetooth earbuds with 24 hour charging case
+SparkNest 20W Fast Charger,SN-FC20,Accessories,SN-AC-002,TRUE,USB-C fast charger for phones and watches
+SparkNest Care Plan Basic (1 Year),SN-CPB1,Annual Care Plans,SN-CP-001,TRUE,Accidental and liquid damage cover for 1 year
+SparkNest Care Plan Plus (2 Years),SN-CPP2,Annual Care Plans,SN-CP-002,TRUE,Extended warranty with doorstep pickup for 2 years
