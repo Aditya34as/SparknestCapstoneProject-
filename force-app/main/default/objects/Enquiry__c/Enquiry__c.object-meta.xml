@@ -159,7 +159,7 @@
     <label>Enquiry</label>
     <nameField>
         <displayFormat>ENQ-{0000}</displayFormat>
-        <label>Enquiry Name</label>
+        <label>Enquiry Number</label>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Enquiries</pluralLabel>

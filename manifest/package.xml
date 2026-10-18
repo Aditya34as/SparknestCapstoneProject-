@@ -1,86 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-	<types>
-		<members>Enquiry__c</members>
-		<members>Enquiry_Product__c</members>
-		<members>Product2</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
-		<members>EnquiryProductHandler</members>
-		<members>EnquiryProductHelper</members>
-		<name>ApexClass</name>
-	</types>
-	<types>
-		<members>EnquiryProductTrigger</members>
-		<name>ApexTrigger</name>
-	</types>
-	<types>
-		<members>SparkNest Sales Rep</members>
-		<members>SparkNest Support Agent</members>
-		<name>Profile</name>
-	</types>
-	<types>
-		<members>Senior_Sales_Rep</members>
-		<name>PermissionSet</name>
-	</types>
-	<types>
-		<members>View_Customer_Budget</members>
-		<name>CustomPermission</name>
-	</types>
-	<types>
-		<members>CEO</members>
-		<members>Sales_Manager</members>
-		<members>Sales_Rep_Hyderabad</members>
-		<members>Sales_Rep_Mumbai</members>
-		<members>Support_Manager</members>
-		<members>Support_Agent_Hyderabad</members>
-		<members>Support_Agent_Mumbai</members>
-		<name>Role</name>
-	</types>
-	<types>
-		<members>SparkNest_Support_Agents</members>
-		<name>Group</name>
-	</types>
-	<types>
-		<members>Care_Plan_Support</members>
-		<members>General_Support</members>
-		<name>Queue</name>
-	</types>
-	<types>
-		<members>Enquiry__c</members>
-		<name>SharingRules</name>
-	</types>
-	<types>
-		<members>SparkNest_Sales</members>
-		<members>SparkNest_Support</members>
-		<name>CustomApplication</name>
-	</types>
-	<types>
-		<members>Enquiry__c</members>
-		<name>CustomTab</name>
-	</types>
-	<types>
-		<members>Enquiry__c-Enquiry Layout</members>
-		<members>Enquiry_Product__c-Enquiry Product Interest Layout</members>
-		<members>Product2-Product Layout</members>
-		<name>Layout</name>
-	</types>
-	<types>
-		<members>Enquiry_Record_Page</members>
-		<name>FlexiPage</name>
-	</types>
-	<types>
-		<members>Contact</members>
-		<name>MatchingRules</name>
-	</types>
-	<types>
-		<members>Contact.Block_Duplicate_Contact_Email</members>
-		<name>DuplicateRule</name>
-	</types>
-	<types>
-		<members>Enquiry_Product__c.Notes__c</members>
-		<name>CustomField</name>
-	</types>
-	<version>68.0</version>
+
+    <!-- Objects: fields, validation rules, list views, search layouts, sharing model -->
+    <types>
+        <members>Account</members>
+        <members>Case</members>
+        <members>Contact</members>
+        <members>Enquiry__c</members>
+        <members>Enquiry_Product__c</members>
+        <members>Product2</members>
+        <name>CustomObject</name>
+    </types>
+
+    <!-- Case Origin picklist (Internal value) -->
+    <types>
+        <members>CaseOrigin</members>
+        <name>StandardValueSet</name>
+    </types>
+
+    <!-- Apex classes -->
+    <types>
+        <members>EnquiryProductHandler</members>
+        <members>EnquiryProductHelper</members>
+        <members>EnquiryProductHelperTest</members>
+        <members>TriggerHandler</members>
+        <members>TriggerDispatcher</members>
+        <members>EnquiryService</members>
+        <members>EnquiryTriggerHandler</members>
+        <members>TestDataFactory</members>
+        <members>EnquiryServiceTest</members>
+        <members>CloseStaleEnquiriesBatch</members>
+        <members>CloseStaleEnquiriesScheduler</members>
+        <members>CloseStaleEnquiriesBatchTest</members>
+        <members>SparkNestEnquiryAPI</members>
+        <members>SparkNestEnquiryAPITest</members>
+        <name>ApexClass</name>
+    </types>
+
+    <!-- Apex triggers -->
+    <types>
+        <members>EnquiryProductTrigger</members>
+        <members>EnquiryTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+
+    <!-- Flows -->
+    <types>
+        <members>Convert_Enquiry_to_Case</members>
+        <members>Enquiry_Auto_Close_Follow_Up_Tasks</members>
+        <members>Weekly_Enquiry_Summary</members>
+        <name>Flow</name>
+    </types>
+
+    <!-- Quick Action -->
+    <types>
+        <members>Enquiry__c.Convert_to_Case</members>
+        <name>QuickAction</name>
+    </types>
+
+    <!-- Security -->
+    <types>
+        <members>SparkNest Sales Rep</members>
+        <members>SparkNest Support Agent</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Senior_Sales_Rep</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>View_Customer_Budget</members>
+        <name>CustomPermission</name>
+    </types>
+    <types>
+        <members>CEO</members>
+        <members>Sales_Manager</members>
+        <members>Sales_Rep_Hyderabad</members>
+        <members>Sales_Rep_Mumbai</members>
+        <members>Support_Manager</members>
+        <members>Support_Agent_Hyderabad</members>
+        <members>Support_Agent_Mumbai</members>
+        <name>Role</name>
+    </types>
+    <types>
+        <members>SparkNest_Support_Agents</members>
+        <name>Group</name>
+    </types>
+    <types>
+        <members>Care_Plan_Support</members>
+        <members>General_Support</members>
+        <name>Queue</name>
+    </types>
+    <types>
+        <members>Enquiry__c</members>
+        <name>SharingRules</name>
+    </types>
+
+    <!-- UI -->
+    <types>
+        <members>SparkNest_Sales</members>
+        <members>SparkNest_Support</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Enquiry__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Enquiry__c-Enquiry Layout</members>
+        <members>Enquiry_Product__c-Enquiry Product Interest Layout</members>
+        <members>Product2-Product Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Enquiry_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+
+    <!-- Duplicate management -->
+    <types>
+        <members>Contact</members>
+        <name>MatchingRules</name>
+    </types>
+    <types>
+        <members>Contact.Block_Duplicate_Contact_Email</members>
+        <name>DuplicateRule</name>
+    </types>
+
+    <version>68.0</version>
 </Package>

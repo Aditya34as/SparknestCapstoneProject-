@@ -1,0 +1,1 @@
+   System.schedule('Close Stale Enquiries - Nightly 1 AM', '0 0 1 * * ?', new CloseStaleEnquiriesScheduler());
