@@ -1,0 +1,216 @@
+{
+  "info": {
+    "_postman_id": "4e751243-612b-4977-90b7-f5c8066b16c5",
+    "name": "SparkNest",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49673798",
+    "_collection_link": "https://go.postman.co/collection/49673798-4e751243-612b-4977-90b7-f5c8066b16c5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1 - New Customer",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"firstName\": \"Vivek\",\r\n  \"lastName\": \"Kumar\",\r\n  \"email\": \"vivek.Kumar@example.com\",\r\n  \"phone\": \"9876500030\",\r\n  \"subject\": \"Need wireless earbuds\",\r\n  \"enquiryType\": \"Product Enquiry\",\r\n  \"budget\": 3500\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{instance}}/services/apexrest/sparknest/enquiry",
+          "host": [
+            "{{instance}}"
+          ],
+          "path": [
+            "services",
+            "apexrest",
+            "sparknest",
+            "enquiry"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2 - Existing Customer",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"firstName\": \"Vivek\",\r\n  \"lastName\": \"Kumar\",\r\n  \"email\": \"vivek.Kumar@example.com\",\r\n  \"phone\": \"9876500030\",\r\n  \"subject\": \"Need wireless earbuds\",\r\n  \"enquiryType\": \"Product Enquiry\",\r\n  \"budget\": 3500\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{instance}}/services/apexrest/sparknest/enquiry",
+          "host": [
+            "{{instance}}"
+          ],
+          "path": [
+            "services",
+            "apexrest",
+            "sparknest",
+            "enquiry"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3 - Missing Email",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"firstName\": \"Vivek\",\r\n  \"lastName\": \"Kumar\",\r\n  \"email\": \"vivek.Kumar@example.com\",\r\n  \"phone\": \"9876500030\",\r\n  \"subject\": \"Need wireless earbuds\",\r\n  \"enquiryType\": \"Product Enquiry\",\r\n  \"budget\": 3500\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{instance}}/services/apexrest/sparknest/enquiry",
+          "host": [
+            "{{instance}}"
+          ],
+          "path": [
+            "services",
+            "apexrest",
+            "sparknest",
+            "enquiry"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4 - Composite Rollback",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"firstName\": \"Vivek\",\r\n  \"lastName\": \"Kumar\",\r\n  \"email\": \"vivek.Kumar@example.com\",\r\n  \"phone\": \"9876500030\",\r\n  \"subject\": \"Need wireless earbuds\",\r\n  \"enquiryType\": \"Product Enquiry\",\r\n  \"budget\": 3500\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{instance}}/services/apexrest/sparknest/enquiry",
+          "host": [
+            "{{instance}}"
+          ],
+          "path": [
+            "services",
+            "apexrest",
+            "sparknest",
+            "enquiry"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5 - Composite Success",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"firstName\": \"Vivek\",\r\n  \"lastName\": \"Kumar\",\r\n  \"email\": \"vivek.Kumar@example.com\",\r\n  \"phone\": \"9876500030\",\r\n  \"subject\": \"Need wireless earbuds\",\r\n  \"enquiryType\": \"Product Enquiry\",\r\n  \"budget\": 3500\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{instance}}/services/apexrest/sparknest/enquiry",
+          "host": [
+            "{{instance}}"
+          ],
+          "path": [
+            "services",
+            "apexrest",
+            "sparknest",
+            "enquiry"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "instance",
+      "value": ""
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}
