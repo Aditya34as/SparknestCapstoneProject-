@@ -14,7 +14,7 @@ public with sharing class EnquiryProductHelper {
         }
 
         if (!enquiryList.isEmpty()) {
-            update enquiryList;
+            update as system enquiryList;   ////// system mode: the count is calculated by code, users only have read access to it/////
         }
     }
 }

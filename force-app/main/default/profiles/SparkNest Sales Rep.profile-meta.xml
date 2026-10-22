@@ -43,6 +43,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>EnquiryStatusLookup</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>EnquiryTriggerHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>

@@ -43,6 +43,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>EnquiryStatusLookup</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>EnquiryTriggerHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -668,7 +672,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Enquiry__c.Total_Products_Interested__c</field>
         <readable>true</readable>
     </fieldPermissions>
