@@ -15,7 +15,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "{{token}}",
+              "value": "{{vault:salesforce_access_token_0rhf}}",
               "type": "string"
             }
           ]
@@ -24,7 +24,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"firstName\": \"Vivek\",\r\n  \"lastName\": \"Kumar\",\r\n  \"email\": \"vivek.Kumar@example.com\",\r\n  \"phone\": \"9876500030\",\r\n  \"subject\": \"Need wireless earbuds\",\r\n  \"enquiryType\": \"Product Enquiry\",\r\n  \"budget\": 3500\r\n}",
+          "raw": "{\r\n  \"firstName\": \"Ajay\",\r\n  \"lastName\": \"Kumar\",\r\n  \"email\": \"ajay.kumar@example.com\",\r\n  \"phone\": \"9876500030\",\r\n  \"subject\": \"Need wireless earbuds\",\r\n  \"enquiryType\": \"Product Enquiry\",\r\n  \"budget\": 3500\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -54,7 +54,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "{{token}}",
+              "value": "{{vault:salesforce_access_token_0rhf}}",
               "type": "string"
             }
           ]
@@ -63,7 +63,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"firstName\": \"Vivek\",\r\n  \"lastName\": \"Kumar\",\r\n  \"email\": \"vivek.Kumar@example.com\",\r\n  \"phone\": \"9876500030\",\r\n  \"subject\": \"Need wireless earbuds\",\r\n  \"enquiryType\": \"Product Enquiry\",\r\n  \"budget\": 3500\r\n}",
+          "raw": "{\r\n  \"email\": \"rahul.verma@example.com\",\r\n  \"subject\": \"Want care plan for my phone\",\r\n  \"enquiryType\": \"Care Plan Enquiry\",\r\n  \"budget\": 4000,\r\n  \"planDuration\": \"2 Year\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -203,6 +203,16 @@
       "response": []
     }
   ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  },
   "variable": [
     {
       "key": "instance",

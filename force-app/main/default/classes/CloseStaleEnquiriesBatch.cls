@@ -14,11 +14,11 @@ public  class CloseStaleEnquiriesBatch implements Database.Batchable<SObject> {
         Date cutOffDate = cutOffTime.date();
 
         return Database.getQueryLocator([
-            SELECT Id, Status__c
-            FROM Enquiry__c
-            WHERE Status__c = 'In Progress'
-            AND LastModifiedDate < :cutOffTime
-            AND (LastActivityDate = null OR LastActivityDate < :cutOffDate)
+            Select Id, Status__c
+            from Enquiry__c
+            Where Status__c = 'In Progress'
+            And LastModifiedDate < :cutOffTime
+            And (LastActivityDate = null or LastActivityDate < :cutOffDate)
         ]);
     }
 
@@ -26,7 +26,7 @@ public  class CloseStaleEnquiriesBatch implements Database.Batchable<SObject> {
         for (Enquiry__c enq : scope) {
             enq.Status__c = 'Closed';
         }
-        Database.update(scope, false);
+        Database.update(scope, false);//here the partial success update is done so that whole query should not roll back 
     }
 
     public void finish(Database.BatchableContext bc) {

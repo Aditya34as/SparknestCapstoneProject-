@@ -1,7 +1,7 @@
 @RestResource(urlMapping='/sparknest/enquiry/*')
 global with sharing class SparkNestEnquiryAPI {
 
-    // data sent by the website
+    /////////////////// data sent by the website
     global class EnquiryRequest {
         public String firstName;
         public String lastName;
@@ -13,7 +13,7 @@ global with sharing class SparkNestEnquiryAPI {
         public String planDuration;
     }
 
-    // data sent back to the website
+    ///////////////// data sent back to the website
     global class EnquiryResponse {
         public Boolean success;
         public String message;
@@ -41,7 +41,7 @@ global with sharing class SparkNestEnquiryAPI {
         Savepoint sp = Database.setSavepoint();
 
         try {
-            // check if customer already exists
+            ///////////// check if customer already exists
             List<Contact> contactList = [SELECT Id FROM Contact WHERE Email = :req.email LIMIT 1];
             Contact con;
 
@@ -76,7 +76,7 @@ global with sharing class SparkNestEnquiryAPI {
             result.enquiryId = enq.Id;
 
         } catch (Exception e) {
-            // undo the new contact if the enquiry fails
+            ///////////////// undo the new contact if the enquiry fails
             Database.rollback(sp);
             res.statusCode = 400;
             result.success = false;
