@@ -93,7 +93,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "{{token}}",
+              "value": "{{vault:salesforce_access_token_0rhf}}",
               "type": "string"
             }
           ]
@@ -102,7 +102,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"firstName\": \"Vivek\",\r\n  \"lastName\": \"Kumar\",\r\n  \"email\": \"vivek.Kumar@example.com\",\r\n  \"phone\": \"9876500030\",\r\n  \"subject\": \"Need wireless earbuds\",\r\n  \"enquiryType\": \"Product Enquiry\",\r\n  \"budget\": 3500\r\n}",
+          "raw": "{\r\n  \"lastName\": \"Test\",\r\n  \"subject\": \"No email given\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -132,7 +132,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "{{token}}",
+              "value": "{{vault:salesforce_access_token_0rhf}}",
               "type": "string"
             }
           ]
@@ -141,7 +141,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"firstName\": \"Vivek\",\r\n  \"lastName\": \"Kumar\",\r\n  \"email\": \"vivek.Kumar@example.com\",\r\n  \"phone\": \"9876500030\",\r\n  \"subject\": \"Need wireless earbuds\",\r\n  \"enquiryType\": \"Product Enquiry\",\r\n  \"budget\": 3500\r\n}",
+          "raw": "{\r\n  \"allOrNone\": true,\r\n  \"compositeRequest\": [\r\n    {\r\n      \"method\": \"POST\",\r\n      \"url\": \"/services/data/v62.0/sobjects/Contact\",\r\n      \"referenceId\": \"newContact\",\r\n      \"body\": {\r\n        \"FirstName\": \"Prateek\",\r\n        \"LastName\": \"Kumar\",\r\n        \"Email\": \"Prateek.Kumar@example.com\"\r\n      }\r\n    },\r\n    {\r\n      \"method\": \"POST\",\r\n      \"url\": \"/services/data/v62.0/sobjects/Enquiry__c\",\r\n      \"referenceId\": \"newEnquiry\",\r\n      \"body\": {\r\n        \"Subject__c\": \"Office order for smart bulbs\",\r\n        \"Enquiry_Type__c\": \"Product Enquiry\",\r\n        \"Contact__c\": \"@{newContact.id}\",\r\n        \"Customer_Budget__c\": 500\r\n      }\r\n    }\r\n  ]\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -149,15 +149,15 @@
           }
         },
         "url": {
-          "raw": "{{instance}}/services/apexrest/sparknest/enquiry",
+          "raw": "{{instance}}/services/data/v62.0/composite",
           "host": [
             "{{instance}}"
           ],
           "path": [
             "services",
-            "apexrest",
-            "sparknest",
-            "enquiry"
+            "data",
+            "v62.0",
+            "composite"
           ]
         }
       },
@@ -171,7 +171,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "{{token}}",
+              "value": "{{vault:salesforce_access_token_0rhf}}",
               "type": "string"
             }
           ]
@@ -180,7 +180,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"firstName\": \"Vivek\",\r\n  \"lastName\": \"Kumar\",\r\n  \"email\": \"vivek.Kumar@example.com\",\r\n  \"phone\": \"9876500030\",\r\n  \"subject\": \"Need wireless earbuds\",\r\n  \"enquiryType\": \"Product Enquiry\",\r\n  \"budget\": 3500\r\n}",
+          "raw": "{\r\n  \"allOrNone\": true,\r\n  \"compositeRequest\": [\r\n    {\r\n      \"method\": \"POST\",\r\n      \"url\": \"/services/data/v62.0/sobjects/Contact\",\r\n      \"referenceId\": \"newContact\",\r\n      \"body\": {\r\n        \"FirstName\": \"Neha\",\r\n        \"LastName\": \"Agarwal\",\r\n        \"Email\": \"neha.agarwal@example.com\"\r\n      }\r\n    },\r\n    {\r\n      \"method\": \"POST\",\r\n      \"url\": \"/services/data/v62.0/sobjects/Enquiry__c\",\r\n      \"referenceId\": \"newEnquiry\",\r\n      \"body\": {\r\n        \"Subject__c\": \"Office order for smart bulbs\",\r\n        \"Enquiry_Type__c\": \"Product Enquiry\",\r\n        \"Contact__c\": \"@{newContact.id}\",\r\n        \"Customer_Budget__c\": 5000\r\n      }\r\n    }\r\n  ]\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -188,15 +188,15 @@
           }
         },
         "url": {
-          "raw": "{{instance}}/services/apexrest/sparknest/enquiry",
+          "raw": "{{instance}}/services/data/v62.0/composite",
           "host": [
             "{{instance}}"
           ],
           "path": [
             "services",
-            "apexrest",
-            "sparknest",
-            "enquiry"
+            "data",
+            "v62.0",
+            "composite"
           ]
         }
       },
